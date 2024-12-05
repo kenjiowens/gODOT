@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d38gmsdorsyea"]
+
+[ext_resource type="Texture2D" uid="uid://b5u73lw40ac2n" path="res://Samuri.png" id="1_2dkde"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_3367a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xg26l"]
+size = Vector2(20, 34)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(76, -25)
+script = ExtResource("1_3367a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_xg26l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 5
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("1_2dkde")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
